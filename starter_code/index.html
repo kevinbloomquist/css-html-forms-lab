@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>CSS HTML Forms Lab</title>
+	<link href="https://fonts.googleapis.com/css?family=Proza+Libre" rel="stylesheet">s
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -95,7 +96,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
-
+	console.log("Test JS!");
 		var main = document.querySelector('#main');
 		function makeResults() {
 			var results = document.createElement('section');
@@ -116,13 +117,26 @@
 		$("form").on("submit", function(event){
 
 		    // Stop the form from submitting
-
+		    event.preventDefault();
+			makeResults();
 	    	// Append the new <section> created above.
+	    	var useName = $("#name").val();
+	   		var useVerb1 = $("#verb-1").val();
+	   		var useMission = $("#mission").val();
+	   		var useSentiment1 = $("input[name = sentiment]:checked").val();
+	   		var useNoun = $("#noun-1").val();
+	   		var useSentiment2 = $("input[name = adjective-2]:checked").val();
+	   		var useNoun2 = $("#noun-2").val();
 
+	    	var OnceUpon = $(".container.results").append("<h3>" + "Once upon a time there was a Developer named " + $("#name").val()+"</h3>");
+	    	var nameCame = $(".container.results").append("<h3>"+useName+ " came to General Asssembly to " +useVerb1+ " the great mountain of programming knowledge.");
+	    	var Mission = $(".container.results").append("<h3>" +useMission+","+useName+ " shouted."+"</h3>");
+	    	var through = $(".container.results").append("<h3>" +"Though " +useSentiment1+","+useName+" was able to overcome all obstacles with the power of their "+useNoun+"." +"</h3>");
+	    	
 	    	/*
 			
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
-
+			
 				"Once upon a time there was a Developer named NAME."
 
 				"NAME came to General Asssembly to VERB1 the great mountain of programming knowledge."
@@ -136,7 +150,7 @@
 	    	*/ 
 		});
 	</script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </body>
 </html>
 

@@ -5,11 +5,21 @@
 	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
 }
 
+
+
 /* 
 	Use Google Fonts to make all of the text Proza Libre.
 
 	Make the Title twice as large as the body text, bold, and spaced evenly.
 */
+body{
+	font-family:Proza Libre;
+	font-size:1em;
+}
+h1{
+	font-size:2em;
+	font-weight:bold;
+}
 
 /*-------- Main Styles --------*/
 
@@ -20,19 +30,97 @@
 
 	Every container, form, input, and button should have rounded corners.
 */
+#main{
+	width:100%;
+}
+.form{
+	background:#E3E6EC;
+	float:left;
+	display:inline;
+	border-radius:5px;
+	margin:10px;
+	width:100%
+	max-width: 500px;
+	text-align: left;
+	padding:1em;
+}
+.results{
+	float:left;
+	display:inline;
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+label,select{
+	display:block;
+}
+
+input{
+	float:left;
+	padding:3px;
+}
+
+
+}
+
+label, input{
+	display:block;
+}
+
+.row{
+
+}
+
+.formgroup{
+	width:100%;
+	display:inline-block;
+}
+
+label.formgroup{
+	width:100%;
+	padding:10px 0;
+
+}
+
+.radio{
+	text-align:left;
+}
+
+.check{
+	text-align:left;
+}
+
+div.row.formGroup{
+	margin:10px auto;
+	display:block;
+}
+
+textarea{
+	height:100px;
+}
+
+.results.container{
+	width:100%
+	max-width:500px;
+	background-color:#C8DBB3;
+	padding:2em;
+}
+}
+
 
 /*-------- Form Styles --------*/
 
 
 /* 
 
-	Make sure the form itself fills the width of whatever container its in, but no larger than 500px.
+	-Make sure the form itself fills the width of whatever container its in, but no larger than 500px.
 	
-	The background should be #E3E6EC, and it should align to the middle of its container.
+	-The background should be #E3E6EC, and it should align to the middle of its container.
 	
-	Every element should have nice, even padding or margin around it.
+	-Every element should have nice, even padding or margin around it.
 
-	.row elements should be spaced out so they're not touching.
+	-.row elements should be spaced out so they're not touching.
 
 	.formGroup elements should fill the width of their container, and be inline-block.
 
